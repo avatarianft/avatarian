@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="فروشگاه آنلاین آواتاریان">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self';">
+    <title>آواتاریان | فروشگاه آنلاین</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="./" aria-label="صفحه اصلی آواتاریان">
+                <span class="brand-mark">آ</span>
+                <span>
+                    <strong>آواتاریان</strong>
+                    <small>انتخاب ساده، خرید مطمئن</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" aria-label="ناوبری اصلی">
+                <a href="#products">محصولات</a>
+                <a href="#about">درباره ما</a>
+                <a href="#contact">ارتباط</a>
+            </nav>
+
+            <button id="cartToggle" class="cart-button" type="button" aria-controls="cartPanel" aria-expanded="false">
+                سبد خرید
+                <span id="cartCount" class="cart-count">۰</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+                <span class="eyebrow">فروشگاه آنلاین آواتاریان</span>
+                <h1>انتخاب‌های روزمره،<br><span>ساده و قابل اعتماد</span></h1>
+                <p>
+                    نسخهٔ اولیهٔ فروشگاه آواتاریان با طراحی سفید، سریع و سازگار با موبایل.
+                </p>
+                <a class="primary-button" href="#products">مشاهده محصولات</a>
+            </div>
+
+            <div class="hero-card" aria-label="مزیت‌های فروشگاه">
+                <div class="hero-circle">AV</div>
+                <div class="hero-note">
+                    <strong>تجربه‌ای روشن</strong>
+                    <span>بدون تبلیغات مزاحم و وابستگی خارجی</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products-section container">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">محصولات منتخب</span>
+                    <h2>برای شروع انتخاب کنید</h2>
+                </div>
+                <div class="filters">
+                    <label class="search-box">
+                        <span class="sr-only">جست‌وجوی محصول</span>
+                        <input id="searchInput" type="search" placeholder="جست‌وجوی محصول..." autocomplete="off">
+                    </label>
+
+                    <label>
+                        <span class="sr-only">دسته‌بندی</span>
+                        <select id="categorySelect">
+                            <option value="all">همه دسته‌ها</option>
+                            <option value="پوشاک">پوشاک</option>
+                            <option value="اکسسوری">اکسسوری</option>
+                            <option value="خانه">خانه</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <div id="productsGrid" class="products-grid" aria-live="polite"></div>
+            <p id="emptyState" class="empty-state" hidden>محصولی با این مشخصات پیدا نشد.</p>
+        </section>
+
+        <section id="about" class="info-section container">
+            <div>
+                <span class="eyebrow">درباره آواتاریان</span>
+                <h2>فروشگاهی سبک، شفاف و قابل توسعه</h2>
+            </div>
+            <p>
+                این نسخه، پایهٔ اولیهٔ فروشگاه است. اتصال درگاه پرداخت،
+                پنل مدیریت، موجودی و سفارش‌ها در مراحل بعدی اضافه خواهد شد.
+            </p>
+        </section>
+
+        <aside id="cartPanel" class="cart-panel container" hidden>
+            <div class="cart-header">
+                <h2>سبد خرید</h2>
+                <button id="cartClose" class="text-button" type="button">بستن</button>
+            </div>
+            <div id="cartItems"></div>
+            <div class="cart-footer">
+                <strong>جمع کل: <span id="cartTotal">۰ تومان</span></strong>
+                <button id="clearCart" class="secondary-button" type="button">خالی کردن سبد</button>
+            </div>
+            <p class="demo-note">پرداخت آنلاین در مرحلهٔ اتصال سرویس فروش فعال خواهد شد.</p>
+        </aside>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <div class="container footer-inner">
+            <span>© آواتاریان</span>
+            <span>نسخهٔ اولیهٔ فروشگاه</span>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
